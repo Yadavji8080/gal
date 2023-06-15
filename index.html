@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Gallery</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <label for="search">Search</label>
+
+        <input type="text" id="name" name="name" required
+            minlength="4" maxlength="28" size="15">
+
+        <button onclick="Search" id="ser">search</button>   
+        <div class="full-img" id="FullImgbox">
+            <img src="/img/p1.jpg" id="Fullimg"><br>
+            <span onclick="closeFullImg()">X</span>
+        </div>
+        <div class="Img_gallery">
+            <img src="/img/p1.jpg" onclick="closeFullImg(this.src)">
+            <img src="/img/p2.jpg" onclick="closeFullImg( this.src)">
+            <img src="/img/p3.jpg" onclick="closeFullImg(this.src)">
+            <img src="/img/p4.jpg" onclick="closeFullImg(this.src)">
+            <img src="/img/p5.jpg" onclick="closeFullImg(this.src)">
+            <img src="/img/p6.jpg" onclick="closeFullImg(this.src)">
+            <img src="/img/p7.jpg" onclick="closeFullImg(this.src)">
+            <img src="/img/p8.jpg" onclick="closeFullImg(this.src)">   
+        </div>
+        <script>
+            var FullImgbox = document.getElementById("FullImg");
+            var FullImg = document.getElementById("FulllImg");
+
+            function openFullImg(picture) {
+                FullImgbox.style.display = flex;
+                FullImg.src = picture;
+
+            }
+            function search(picture) {
+                var ser = document.getElementById("name").value = picture;
+            }
+        </script>
+
+    </body>
+
+</html>
